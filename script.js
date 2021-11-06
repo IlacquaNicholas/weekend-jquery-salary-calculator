@@ -2,8 +2,10 @@ $(document).ready(onReady);
 let employees = [];
 function onReady (){
     employeeToTable(employees)
-    renderTotalMonthlyCast(employees)
-    $('#submitButton').on('click', employeeInfo)  
+    renderTotalMonthlyCost(employees)
+    $('#submitButton').on('click', employeeInfo) 
+    //Not sure if I will need this button click here (might be for the strech goal)
+    // $('#deletButton').on('click', employeeToTable )
 }
 function employeeInfo(){
     let firstName = $('#firstName').val();
@@ -28,7 +30,7 @@ function employeeInfo(){
     $('#titleName').val('');
     $('#annualSalary').val('');
     employeeToTable(employees)
-    renderTotalMonthlyCast(employees)
+    renderTotalMonthlyCost(employees)
    
 
 }
@@ -44,15 +46,15 @@ function employeeToTable (addToTable){
         <td>${employee.id}</td>
         <td>${employee.title}</td>
         <td>${employee.annualSalary}</td>
-        
+        <td><button>Delete</button></td>
     </tr>
     `;
 $('#employeeTableBody').append(newTableRow);
  }
 
 }
-function renderTotalMonthlyCast(salarToSum){
-    let totalMonlthy = calculateMonthlyCost(salarToSum)
+function renderTotalMonthlyCost(salaryToSum){
+    let totalMonlthy = calculateMonthlyCost(salaryToSum)
     $('#totalMonthlyCost').text(totalMonlthy)
 }
 
@@ -60,8 +62,9 @@ function calculateMonthlyCost (sumOfCost){
  let sum = 0;
     for (let salary of sumOfCost){
       sum += salary.annualSalary / 12; 
-    
-    
+      if (sum > 20000) {
+     $('h3').css('background-color', 'red');
+      }
  }
 return sum
     
