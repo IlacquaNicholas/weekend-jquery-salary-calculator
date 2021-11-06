@@ -1,13 +1,13 @@
 $(document).ready(onReady);
-let employees = [
-{fistName: "Nick", lastName:"Ilacqua", id:"1234", title:"Team lead", annualSalary:90000, }
-];
+let employees = [];
 function onReady (){
+    employeeToTable(employees)
     $('#submitButton').on('click', employeeInfo)
 
     
 }
 function employeeInfo(){
+    employeeToTable(employees)
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
     let id = $('#idNumber').val();
@@ -28,5 +28,21 @@ function employeeInfo(){
     $('#idNumber').val('');
     $('#titleName').val('');
     $('#annualSalary').val('');
-    
+
+}
+
+function employeeToTable (addToTable){//Need help on this part I keep getting undefined
+ for (let employee of addToTable){
+    let newTableRow = `
+    <tr>
+        <td>${employees.firstName}</td>
+        <td>${employees.lastName}</td>
+        <td>${employees.id}</td>
+        <td>${employees.title}</td>
+        <td>${employees.salary}</td>
+    </tr>
+    `;
+$('#employeeTableBody').append(newTableRow);
+}
+
 }
