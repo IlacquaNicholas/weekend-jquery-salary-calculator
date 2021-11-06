@@ -2,17 +2,15 @@ $(document).ready(onReady);
 let employees = [];
 function onReady (){
     employeeToTable(employees)
-    $('#submitButton').on('click', employeeInfo)
-
-    
+    $('#submitButton').on('click', employeeInfo)  
 }
 function employeeInfo(){
-    employeeToTable(employees)
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
     let id = $('#idNumber').val();
     let title = $('#titleName').val();
-    let salary = $('#annualSalary').val();//Having trouble with having a number come up. 
+    let salary = $('#annualSalary').val();
+
     
     let newEmployee = {
         firstName:firstName, 
@@ -28,21 +26,23 @@ function employeeInfo(){
     $('#idNumber').val('');
     $('#titleName').val('');
     $('#annualSalary').val('');
+    employeeToTable(employees)
 
 }
 
-function employeeToTable (addToTable){//Need help on this part I keep getting undefined
- for (let employee of addToTable){
+function employeeToTable (addToTable){
+    $('#employeeTableBody').empty()
+ 
+  for (let employee of addToTable){
     let newTableRow = `
     <tr>
-        <td>${employees.firstName}</td>
-        <td>${employees.lastName}</td>
-        <td>${employees.id}</td>
-        <td>${employees.title}</td>
-        <td>${employees.salary}</td>
+        <td>${employee.firstName}</td>
+        <td>${employee.lastName}</td>
+        <td>${employee.id}</td>
+        <td>${employee.title}</td>
+        <td>${employee.annualSalary}</td>
     </tr>
     `;
 $('#employeeTableBody').append(newTableRow);
-}
-
+ }
 }
