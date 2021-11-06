@@ -44,6 +44,7 @@ function employeeToTable (addToTable){
         <td>${employee.id}</td>
         <td>${employee.title}</td>
         <td>${employee.annualSalary}</td>
+        
     </tr>
     `;
 $('#employeeTableBody').append(newTableRow);
