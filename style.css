@@ -1,0 +1,19 @@
+body {
+ background-color: rgba(138, 123, 105, 0.445);
+}
+
+header {
+background-color: grey;
+color: darkblue;
+text-align: center;
+}
+
+#tableBorder {
+border-collapse: separate;
+border-style: double;
+}
+
+h3 {
+text-align: right;
+width:200px;
+}

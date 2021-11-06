@@ -48,25 +48,27 @@ function employeeToTable (addToTable){
         <td>${employee.annualSalary}</td>
         <td><button>Delete</button></td>
     </tr>
+
     `;
 $('#employeeTableBody').append(newTableRow);
+
  }
 
 }
 function renderTotalMonthlyCost(salaryToSum){
-    let totalMonlthy = calculateMonthlyCost(salaryToSum)
-    $('#totalMonthlyCost').text(totalMonlthy)
+    let totalMonthly = calculateMonthlyCost(salaryToSum)
+    $('#totalMonthly').text(totalMonthly)
 }
 
 function calculateMonthlyCost (sumOfCost){
- let sum = 0;
+ let salaryTotal = 0;
+ let salaryMonthly = 0;
     for (let salary of sumOfCost){
-      sum += salary.annualSalary / 12; 
-      if (sum > 20000) {
-     $('h3').css('background-color', 'red');
+        salaryTotal += salary.annualSalary;
       }
- }
-return sum
-    
+    salaryMonthly = (salaryTotal/12).toFixed(2);
+    $('#totalMonthly').text(`Total Monthly: ${salaryMonthly}`)
+    if (salaryMonthly > 20000) {
+        $('.red').css('background-color', 'red');
+    }
 }
-
