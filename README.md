@@ -27,8 +27,20 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 ### Usage
 1. Pull up the application. 
 2. Once this is up and visable, the user should see Add Employee and under that are fields to add your employees information. 
-3. Once all the correct infoormation is enter for the employee, click the submit button. 
-4. The submit button will enter the employees info into the table and will calculate the totaly monthly cost.
-5. If the total monthly cost is more then $20,000 the totaly monthly cost with be in red.
-6. There is also a delete button in the Employees table. This will allow the employees that were entered to be taken out of the employees table if needed or if something was enetered by mistake. 
+3. Once all the correct information is entered for the employee, click the submit button. 
+4. The submit button will enter the employees information into the table and will calculate the totaly monthly cost.
+5. The total monthly cost takes the employees annual salary's and adds them up then divides them by 12. 
+6. If the total monthly cost is more then $20,000 the totaly monthly cost with be in red.
+7. There is also a delete button in the Employees table. This will allow the employees that were entered to be taken out of the employees table if needed or if something was enetered by mistake. 
 
+### Built With 
+1. Java script
+2. Jquery
+3. CSS
+
+### Acknowledgement
+I would like to thank my Gemeni classmated and the instructors at Prime Digital Academy. 
+
+### Support
+
+If you have suggestions or issues, please email me at Nick.Ilacqua@yahoo.com .
