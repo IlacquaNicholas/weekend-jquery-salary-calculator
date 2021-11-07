@@ -7,13 +7,21 @@ background-color: grey;
 color: darkblue;
 text-align: center;
 }
+#tableCenter {
+table-layout: fixed;
 
-#tableBorder {
-border-collapse: separate;
-border-style: double;
+}
+table
+
+tr,thead,tbody, table,th {
+table-layout: fixed;
+border-style: groove;
+
 }
 
-h3 {
-text-align: right;
-width:200px;
+footer {
+text-align: end;
+}
+#mainDiv {
+text-align:  center;
 }

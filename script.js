@@ -51,9 +51,7 @@ function employeeToTable (addToTable){
 
     `;
 $('#employeeTableBody').append(newTableRow);
-
  }
-
 }
 function renderTotalMonthlyCost(salaryToSum){
     let totalMonthly = calculateMonthlyCost(salaryToSum)

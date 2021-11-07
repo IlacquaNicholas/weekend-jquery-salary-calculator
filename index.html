@@ -9,6 +9,7 @@
     <script src="script.js"></script>
     <title>Document</title>
 </head>
+<div id="mainDiv">
  <header>
    <h1>Salary Calculator</h1> 
  </header>
@@ -20,9 +21,9 @@
         <input id="titleName" placeholder="Title" type="text">
         <input id="annualSalary" placeholder="Annual Salary" type="Number">
         <button id="submitButton"> Submit</button>
-    <div class="tableCenter">
+    <div id="tableCenter">
         <h1>Employees</h1>
-        <table id="tableBorder">
+        <table>
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -34,7 +35,7 @@
                 </tr>
             </thead>
             <tbody id="employeeTableBody">
-                <tr>
+                <!-- <tr> -->
                     <!-- <td>Nick</td>
                     <td>Ilacqua</td>
                     <td>1234</td>
@@ -43,11 +44,13 @@
                     <!-- <td>
                         <button>Delete</button>
                     </td> -->
-                </tr>
+                <!-- </tr> -->
             </tbody>
         </table>
+      <footer> 
         <h1 id="totalMonthly" class="red">Total Monthly: $0</h1>
+      </footer>
     </div>
-
     </body>
+</div>
 </html>
