@@ -4,8 +4,7 @@ function onReady (){
     employeeToTable(employees)
     renderTotalMonthlyCost(employees)
     $('#submitButton').on('click', employeeInfo) 
-    //Not sure if I will need this button click here (might be for the strech goal)
-    // $('#deletButton').on('click', employeeToTable )
+    $('#employeeTableBody').on('click','.deleteButton', handleDeleteButton);
 }
 function employeeInfo(){
     let firstName = $('#firstName').val();
@@ -34,6 +33,10 @@ function employeeInfo(){
    
 
 }
+//Added this after the assignment
+function handleDeleteButton (){
+$(this).closest('tr').remove();
+}
 
 function employeeToTable (addToTable){
     $('#employeeTableBody').empty()
@@ -46,13 +49,15 @@ function employeeToTable (addToTable){
         <td>${employee.id}</td>
         <td>${employee.title}</td>
         <td>${employee.annualSalary}</td>
-        <td><button>Delete</button></td>
+        <td><button class="deleteButton">Delete</button></td>
     </tr>
 
     `;
 $('#employeeTableBody').append(newTableRow);
- }
+  }
+    handleDeleteButton(employees)
 }
+
 function renderTotalMonthlyCost(salaryToSum){
     let totalMonthly = calculateMonthlyCost(salaryToSum)
     $('#totalMonthly').text(totalMonthly)

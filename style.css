@@ -16,12 +16,21 @@ table
 tr,thead,tbody, table,th {
 table-layout: fixed;
 border-style: groove;
+  border: 1px solid #999;
+  padding: 0.5rem;
 
+}
+/* //Tried added some CSS to the table */
+.tableLayOut{
+    table-layout: fixed;
+border-style: groove;
+  border: 1px solid #999;
+  padding: 0.5rem;
 }
 
 footer {
 text-align: end;
 }
 #mainDiv {
-text-align:  center;
+text-align: left;
 }
